@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    font-family: "Ek Mukta", sans-serif;
+    font-size: 19px;
+    font-weight: 200;
+    line-height: 28.5px;
+}
+
+header{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color:black;
+    color:white;
+    margin-bottom: 30px;
+    margin-block-end: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ensures the container spans the full width */
+}
+
+.section-one{
+    background-color: white;
+    color: black;
+    margin-block-end: 30px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.section-two{
+    background-color:lightgray;
+    color:black;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+footer{
+    background-color:black;
+    color:white;
+}
