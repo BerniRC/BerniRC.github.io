@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>actividad2 - Versión Extendida</title>
+        <style>
+            /* Tus estilos originales */
+            h1 {
+                background-color: brown;
+                font-size: 100px;
+                font-weight: 400; /* Lo hicimos "no negrita" */
+            }
+            p {
+                color: aqua;
+            }
+            #contenedor {
+                margin-top: 50px;
+                border: 10px solid #00F934;
+                display: flex;
+                flex-direction: row-reverse;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                /* Eliminamos position: fixed para que no tape lo nuevo */
+            }
+            div.elemento {
+                border: 10px solid #808934;
+                padding: 10px;
+            }
+
+            /* --- NUEVOS ESTILOS "FEOS" PARA CSS EXPLANATION --- */
+            body {
+                margin: 0; /* Quitamos margen por defecto */
+                background-color: yellow; /* Fondo chillón */
+            }
+
+            .seccion-css {
+                background-color: limegreen;
+                border: 10px dashed red;
+                margin-top: 50px;
+                padding: 20px;
+            }
+
+            .galeria-feo {
+                display: flex;
+                height: 150px;
+                gap: 5px;
+                margin-top: 20px;
+            }
+
+            .galeria-feo img {
+                flex: 1;
+                width: 0;
+                object-fit: cover;
+                border: 5px solid blue;
+            }
+
+            .input-feo {
+                display: flex;
+                justify-content: center;
+                background-color: hotpink;
+                padding: 20px;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                background-color: white;
+                margin-top: 20px;
+            }
+
+            th, td {
+                border: 5px solid black;
+                padding: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="contenedor">
+            <div class="elemento">Explain the head and body tags</div>
+            <div class="elemento">The head es la parte en la que colocaras el nombre de la pagina y otras cosas adicionales para que funcione. Mientras que el body es donde esta todo lo que ves dentro de la pagina</div>
+        </div>
+
+        <p>what is html</p>
+        <h1 style="margin-top: 400px;">Html es la herramienta que utilizan los programadores para hacer paginas web</h1>
+        
+        <a href="https://www.google.com">Hipervinculo a Google</a>
+        <br>
+        <img src="https://via.placeholder.com/150" alt="Placeholder" style="width: 200px; height: auto;">
+
+        <h3>Explain the section, article, aside, header, footer tag</h3>
+        <h3>Son secciones que le dan estructura al contenido de una pagina</h3>
+
+        <ul>
+            <li>2</li>
+            <li>3</li>
+            <li>1</li>
+        </ul>
+
+        <ol>
+            <li>3</li>
+            <li>1</li>
+            <li>2</li>
+        </ol>
+
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr>
+                <th>2</th>
+                <th>3</th>
+                <th>1</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                <tr>
+                <td>1</td>
+                <td>3</td>
+                <td>2</td>
+                </tr>
+                <tr>
+                <td>3</td>
+                <td>2</td>
+                <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="seccion-css">
+            <h2>¿Qué es CSS y para qué sirve?</h2>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <p style="color: black; background: white; padding: 10px;">
+                    CSS es el maquillaje de la web. Su propósito es que el HTML se vea bonito.
+                </p>
+                <div class="galeria-feo">
+                    <img src="https://via.placeholder.com/100/FF0000" alt="1">
+                    <img src="https://via.placeholder.com/100/00FF00" alt="2">
+                    <img src="https://via.placeholder.com/100/0000FF" alt="3">
+                    <img src="https://via.placeholder.com/100/FFFF00" alt="4">
+                    <img src="https://via.placeholder.com/100/FF00FF" alt="5">
+                </div>
+            </div>
+            
+            
+            <h3>Cómo aplicar CSS:</h3>
+            <ul>
+                <li><strong>Inline:</strong> Directo en la etiqueta (ej. style="").</li>
+                <li><strong>Interno:</strong> Dentro de &lt;style&gt; en el head.</li>
+                <li><strong>Externo:</strong> En un archivo .css aparte (el mejor).</li>
+            </ul>
+        </div>
+
+        <div class="input-feo">
+        </div>
+
+        <h3>Selector vs Regla:</h3>
+        <p style="color: red; font-size: 20px;">
+            El <strong>Selector</strong> es a quién apuntas (ej. p) y la <strong>Regla</strong> es lo que le haces (ej. color: aqua).
+        </p>
+
+        <div style="background-color: orange; border: 10px ridge purple; margin-top: 50px; padding: 20px;">
+    
+            <h2 style="font-weight: 400; text-align: center; background: black; color: white;">SELECCIONANDO COSAS EN CSS</h2>
+
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px; background: white; padding: 15px; border: 5px solid navy;">
+                    <h3>Los "Apuntadores" (Selectors)</h3>
+                    <ul>
+                        <li><strong>Tag Selector:</strong> Selecciona a TODOS los de un tipo.</li>
+                        <li><strong>Class Selector:</strong> Selecciona a un grupo con una etiqueta específica. Usas un punto</li>
+                        <li><strong>Id Selector:</strong> Selecciona a UNO solo, es único. Usas un gato</li>
+                        <li><strong>Tag and Class:</strong> Selecciona un tipo específico que tenga esa etiqueta.</li>
+                    </ul>
+                </div>
+
+                <div style="flex: 1; min-width: 300px; background: white; padding: 15px; border: 5px solid navy;">
+                    <h3>¿Qué es Class e ID?</h3>
+                    <p><strong>Class:</strong> Es una etiqueta que puedes repetir. Muchos elementos pueden tener la misma clase.</p>
+                    <p><strong>ID:</strong> Solo puede haber uno por página. Es para cosas únicas.</p>
+                    <p><strong>Relación con CSS:</strong> Son los nombres que usamos en el archivo CSS para saber a quién cambiarle el color o tamaño.</p>
+                </div>
+            </div>
+
+            
+
+            <div style="margin-top: 30px; background: lightblue; border: 5px double black; padding: 20px;">
+                <h3>Box Model</h3>
+                <p>En HTML, todo es una caja invisible. Se compone de:</p>
+                <ol>
+                    <li><strong>Content:</strong> El texto o imagen.</li>
+                    <li><strong>Padding:</strong> El espacio entre el regalo y la caja.</li>
+                    <li><strong>Border:</strong> El borde de la caja.</li>
+                    <li><strong>Margin:</strong> El espacio entre esta caja y la caja de al lado.</li>
+                </ol>
+
+                
+
+                <div style="margin: 20px; border: 10px solid red; padding: 30px; background-color: white;">
+                    <div style="background-color: yellow; text-align: center;">
+                        CAJA
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; background: coral; border: 10px solid darkgreen; padding: 20px;">
+                <h3>Media Queries</h3>
+                <p>Son como detectores de pantalla. Es lo que hace que tu página no se rompa cuando la ves en el cel.</p>
+                
+                
+            </div>
+        </div>
+
+
+
+        <div style="background-color: #33ffbd; border: 15px double #ff33ec; margin-top: 50px; padding: 25px;">
+    
+            <h2 style="font-weight: 400; text-align: center; background: #900c3f; color: white; padding: 10px;">
+                FLEX VS GRID
+            </h2>
+
+            <div style="display: flex; flex-direction: column; gap: 30px;">
+                
+                <div style="background: white; padding: 20px; border: 5px solid #581845;">
+                    <h3>Flex</h3>
+                    <p>Se usa para alinear cosas en una sola dirección, ya sea una fila o una columna. Puedes decidir si se juntan, se separan o se estiran.</p>
+
+                    <div style="display: flex; justify-content: space-around; background: #eee; padding: 10px; border: 2px dashed black;">
+                        <div style="background: red; color: white; padding: 10px;">Flex 1</div>
+                        <div style="background: blue; color: white; padding: 10px;">Flex 2</div>
+                        <div style="background: green; color: white; padding: 10px;">Flex 3</div>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 20px; border: 5px solid #1a5276;">
+                    <h3>Grid</h3>
+                    <p>Se usa para diseños en dos direcciones, filas Y columnas al mismo tiempo. Es como una hoja de Excel</p>     
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; background: #ccc; padding: 5px;">
+                        <div style="background: purple; color: white; padding: 10px; grid-column: span 2;">Encabezado Grid (Ocupo 2 columnas)</div>
+                        <div style="background: orange; padding: 10px;">Columna A</div>
+                        <div style="background: orange; padding: 10px;">Columna B</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>
