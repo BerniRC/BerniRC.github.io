@@ -5,15 +5,33 @@
         <link rel="stylesheet" href="estilos.css">
     </head>
     <body style="background-color: #609090"></body>
-        <h3>Bernardo Robles A01646603</h2>
-        <h1>De los temas que se presentan</h1>
+        <style>
+            h1 {
+                border: 10px solid #FF00FF;
+                width: 33%;
+                margin: auto;
+            }
+            h2.rosa{
+                background-color: #FF00FF;
+            }
+            .amarillo{
+                background-color: yellow;
+            }
+        </style>
+        <div id="container">
+            <div class="elemento">Flex 1</div>
+            <div class="elemento">Flex 2</div>
+            <div class="elemento">Flex 3</div>
+        </div>
+        <h2>Bernardo Robles A01646603</h2>
+        <h1 id="encabezado">De los temas que se presentan</h1>
         <h3>Los conoces aunque sea poquito</h3>
         <p>Nunca me interesé en desarrollo web, pero tengo conocimientos básicos</p>
         <h3>Me interesa conocer más?</h3>
         <p>Si, suena entretenido</p>
         <h3>He hecho algun proyecto web?</h3>
         <p>No, nunca</p>
-        <h2 style="background-color: rgb(30, 105, 210);">Otros Estudiantes</h2>
+        <h2 class="amarillo">Otros Estudiantes</h2>
         <a href="https://cesarverdugo1.github.io/miarchivo.html">Enlace al sitio de Cesar</a>
         <p></p>
         <a href="https://joser-ruiz.github.io/miarchivo.html">Enlace al sitio de Ramon</a>
@@ -21,16 +39,52 @@
         <a href="https://tellez05.github.io/miarchivo.html">Enlace al sitio de Tellez</a>
         <p></p>
         <h1>Tareas</h1>
-        <h2>NotAnAtlas Copy</h2>
-        <h3>Version 1</h3>
+        
+        <h2 class="rosa">NotAnAtlas Copy</h2>
+        <h3 id="wuthering">Version 1</h3>
+        
         <img src="NotAnAtlasV1.png">
         <img src="NotAnAtlasV2.png">
         <img src="NotAnAtlasV3.png">
         <a href="https://bernirc.github.io/v4.html">Enlace a Copia de NotAnAtlas</a>
-        <p></p>
-        <a href="https://bernirc.github.io/paginafea.html">Enlace a pagina fea</a>
-        <p></p>
-        <a href="https://bernirc.github.io/picnic.html">Enlace a act picnic</a>
+
+        <h2>Actividad 5 - Servidor</h2>
+        <p>Enlaces a los archivos del servidor:</p>
+        <ul>
+            <li><a href="https://bernirc.github.io/Act5/servidor.js">servidor.js</a></li>
+            <li><a href="https://bernirc.github.io/Act5/bienvenida.html">bienvenida.html</a></li>
+            <li><a href="https://bernirc.github.io/Act5/adoptantes.html">adoptantes.html</a></li>
+            <li><a href="https://bernirc.github.io/Act5/equipo.html">equipo.html</a></li>
+            <li><a href="https://bernirc.github.io/Act5/mascotas.html">mascotas.html</a></li>
+            <li><a href="https://bernirc.github.io/Act5/opinion.html">opinion.html</a></li>
+        </ul>
+
+        <script>
+            function triplicar(a){
+                return 3*a;
+            }
+
+            console.log("Berni");
+            let p={"titulo":"Llano en llamas", "autor":"Juan Rulfo"};
+            console.log(p);
+            console.log(triplicar(3));
+
+            let d=document.createElement("p");
+            d.textContent=("hola");
+            document.getElementById("encabezado").appendChild(d);
+
+            async function obtenerJSON(){
+                const respuesta=await fetch('http://openlibrary.org/subjects/love.json');
+                const datos=await respuesta.json();
+                console.log(datos.works[0].title);
+                let p2=document.createElement("p");
+                p2.textContent=(datos.works[0].title);
+                document.getElementById("wuthering").appendChild(p2);
+            }
+
+            obtenerJSON();
+            
+        </script>
     </body>
 </html>
 
